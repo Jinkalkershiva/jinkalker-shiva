@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-style Search</title>
+    <link rel="stylesheet" href="{ % static 'css/dashboard.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">ChatSearch</div>
+        <nav>
+            <a href="{% static'css/#' %}">Home</a>
+            <a href="{% static 'css/#'%}">Search</a>
+            <a href="{% static 'css/mailto:teamskystudies@gmail.com' %}">Contact Us</a>
+            <a href="{% static 'css/https://docs.google.com/document/d/1yjGM5ptXqNc2t2Vx2E4mmsjLOEdjPHGQKQorssAo3nI/edit?usp=sharing'%}" target="_blank">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Ask your query..." id="search-input">
+                <button id="search-btn">Search</button>
+            </div>
+
+            <div class="options">
+                <button class="add-doc-btn" onclick="document.getElementById('file-input').click()">Add Document</button>
+                <input type="file" id="file-input" style="display: none;">
+                
+                <div class="filter-dropdown">
+                    <button class="filter-btn">Filter</button>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="8 Marks"> 8 Marks</label>
+                        <label><input type="checkbox" value="6 Marks"> 6 Marks</label>
+                        <label><input type="checkbox" value="5 Marks"> 5 Marks</label>
+                        <label><input type="checkbox" value="4 Marks"> 4 Marks</label>
+                        <label><input type="checkbox" value="2 Marks"> 2 Marks</label>
+                        <label><input type="checkbox" value="1 Marks"> 1 Marks</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+      <div class="doubt">
+        
+      </div>
+    <script src="{% static 'js/script.js' % }"></script>
+</body>
+</html>

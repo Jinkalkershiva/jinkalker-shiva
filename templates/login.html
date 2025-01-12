@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Student Helper</title>
+    {% load static % }
+    <link rel="stylesheet" href="{% static 'login.css' % }">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login to Student Helper</h2>
+        <form action="/login/" method="POST">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit"><a href="{ % static 'dashoboard.html' % }">Login</a></button>
+        </form>
+        <div class="alternative-login">
+            <p>Or login with:</p>
+            <button class="google-login"><a href="{% static 'https://148783668796-87f3ha442cdo8sre4dh3a6b86th256vv.apps.googleusercontent.com/' % }">Login with Google</a></button>
+        </div>
+        <p>Don't have an account? <a href="{% url 'signup' % }">Sign Up</a></p>
+    </div>
+</body>
+</html>
